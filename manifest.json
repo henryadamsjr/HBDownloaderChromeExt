@@ -1,0 +1,26 @@
+{
+    "name": "Hello Extensions of the world!",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "downloads"
+    ],
+    "background": {
+        "service_worker": "service-worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.humblebundle.com/downloads*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "Tooltip!!!",
+        "default_icon": "hello_extensions.png"
+    }
+}
